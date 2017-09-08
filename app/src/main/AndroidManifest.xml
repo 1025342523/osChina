@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.junda.oschina">
+    <permission android:name="net"/>
+
+    <!--该权限允许使用ActivityManager访问当前运行的任务栈-->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!--该权限允许PowerManager WakeLocks防止处理器休眠或屏幕变暗，比如百度地图在定位是会用到-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!--该权限用于读取系统设置的，百度地图lbs需要读取一些系统设置信息-->
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <!--该权限用于进行网络定位，比如基于百度lbs雷达功能附近的程序员模块-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--该权限用于访问GPS定位，比如基于百度lbs雷达功能附近的程序员模块-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
